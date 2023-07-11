@@ -1,0 +1,1 @@
+--bu şekilde yorum yazılabilie
