@@ -28,6 +28,7 @@ kayit_tarihi date            -- Tarih icin date data turu kullanılır
 
 -- SORU1.2: talebeler tablosundaki verileri listeleyelim
 select * from talebeler;   -- * tum sutunlardaki verileri listeler
+drop table talebeler;--tablo sil 
 
 -- SORU1.3 talebeler tablosuna veri ekleyelim
 insert into talebeler values('12345678912','Ahmet',72.5,'2020-02-14');
@@ -107,7 +108,7 @@ select * from ogrenciler where sinav_notu in(65,85);
 
 
 --SORU10: .ogrenciler tablosundaki sinav_notu 65 veya 85 olmayan ogrencilerin tüm bilgilerini listele
-select * from ogrenciler where sinav_notu not in(65,85
+select * from ogrenciler where sinav_notu not in(65,85);
 												 
 -- not in komutu parantezin icinde olmayanları getirir.
 												 

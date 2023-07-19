@@ -144,3 +144,23 @@ union
 select sehir, maas from personel where sehir='Istanbul'
 order by maas desc;
 
+/* -----------------------------------------------------------------------------
+  SORU3: sirket'i 'Honda', 'Ford' ve 'Tofas' olan personelin sirket ve isim'ini tekrarsız listeleyin
+------------------------------------------------------------------------------*/  
+
+select sirket, isim from personel where sirket='Honda'
+union 
+select sirket, isim from personel where sirket='Ford'
+union 
+select sirket, isim from personel where sirket='Tofas'
+
+/* -----------------------------------------------------------------------------
+  SORU4: maas'ı 5000’den az olan personelin isim, maas ve sirket bilgileri ile, 
+-- 'Honda' calisani olmayan personelin isim, maas, sirket bilgilerini
+-- tekrarsız listeleyen bir sorgu yaziniz. 
+------------------------------------------------------------------------------*/ 
+
+select isim, maas, sirket from personel where maas<5000 
+union
+select isim, maas, sirket from personel where sirket!='Honda'
+
